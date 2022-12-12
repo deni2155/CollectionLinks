@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Хранилище ссылок</title>
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.css"/>
+        <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+    </h:head>
+    <h:body>
+        <div class="conteiner">
+            <div class="row g-0 vh-100 d-flex justify-content-center align-items-center bg-light">
+                <div class="col-auto text-center rounded-3">
+                    <nav>
+                        <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-login-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="true">
+				Вход
+                            </button>
+                            <button class="nav-link" id="nav-registration-tab" data-bs-toggle="tab" data-bs-target="#nav-registration" type="button" role="tab" aria-controls="nav-registration" aria-selected="false">
+                                Регистрация
+                            </button>
+			</div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                    <!--Форма входа-->
+                    <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <h:form class="p-3">
+                                <div class="mb-2">
+                                    <h:outputLabel for="loginEmailOrLogin" class="form-label">
+                                        Логин или адрес электронной почты
+                                    </h:outputLabel>
+                                    <h:inputText class="form-control" id="loginEmailOrLogin"/>
+				</div>
+                                <div class="mb-2">
+                                    <h:outputLabel for="loginPassword" class="form-label">
+					Пароль
+                                    </h:outputLabel>
+                                    <h:inputSecret class="form-control" id="loginPassword"/>
+				</div>
+				<div class="mb-2 form-check">
+                                    <h:selectBooleanCheckbox class="form-check-input" id="loginSave"/>
+                                    <h:outputLabel class="form-check-label" for="loginSave">Запомнить</h:outputLabel>
+				</div>
+				<h:commandButton type="submit" class="btn btn-primary" action="alert('Вход');" value="Вход"/>
+                            </h:form>
+			</div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-registration" role="tabpanel" aria-labelledby="nav-registration-tab">
+                            <h:form class="p-3">
+                                <div class="mb-3">
+                                    <h:outputLabel for="registrationLogin" class="form-label">
+                                        Логин
+                                    </h:outputLabel>
+                                    <h:inputText class="form-control" id="registrationLogin"/>
+                                </div>
+                                <div class="mb-3">
+                                    <h:outputLabel for="registrationEmail" class="form-label">
+                                        Адрес электронной почты
+                                    </h:outputLabel>
+                                    <h:inputText class="form-control" id="registrationEmail"/>
+                                </div>
+                                <div class="mb-3">
+                                    <h:outputLabel for="registrationOnePassword" class="form-label">
+                                        Пароль
+                                    </h:outputLabel>
+                                    <h:inputSecret class="form-control" id="registrationOnePassword"/>
+                                </div>
+                                <div class="mb-3">
+                                    <h:outputLabel for="registrationTwoPassword" class="form-label">
+                                        Пароль повторно
+                                    </h:outputLabel>
+                                    <h:inputSecret class="form-control" id="registrationTwoPassword"/>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <h:selectBooleanCheckbox class="form-check-input" id="registrationSave"/>
+                                    <h:outputLabel class="form-check-label" for="registrationSave">Запомнить</h:outputLabel>
+                                </div>
+                                <h:commandButton type="submit" class="btn btn-primary" value="Регистрация"/>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	</div>
+    </h:body>
+</html>
+
